@@ -18,8 +18,13 @@
 - <img width="2%" src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg"> Bootstrap
 - <img width="2%" src="https://www.vectorlogo.zone/logos/jquery/jquery-vertical.svg"> jQuery
 - <img width="2%" src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg"> JavaScript
-  
- <br>
+<br>
+    
+- **Deployed on GitHub** 
+
+<!--Create Badge on https://shields.io/category/monitoring-->
+#### :link: **Link:** [CharCount]() <a href="http://cursophp.foxit.com.ar/comision2014/Paula_Daniela_Farias/"> <img align="center" alt="Website" src="https://img.shields.io/website?down_message=offline&label=%20&logo=google-chrome&logoColor=white&up_color=blue&up_message=online&url=http%3A%2F%2Fcursophp.foxit.com.ar%2Fcomision2014%2FPaula_Daniela_Farias%2F"> </a>
+<br>
 
 
 #### :woman_technologist: **Developer:** [Paula Farias](https://linkedin.com/in/paulafarias)
