@@ -1,0 +1,28 @@
+<!--Create Badges on https://pufler.dev/git-badges/ and https://shields.io/category/social-->
+
+<img alt="Repository created date" align="right" src="https://badges.pufler.dev/created/pauladanielafarias/charcount?style=social&color=black&logo=github"> <img alt="Repository visits" align="right" src="https://badges.pufler.dev/visits/pauladanielafarias/charcount?style=social&color=purple&logo=github"> <a src="https://github.com/pauladanielafarias/?tab=follow"><img alt="GitHub Follow" align="right" src="https://img.shields.io/github/followers/pauladanielafarias?label=Follow&style=social"></a> 
+<br>
+
+
+## :abacus: Character counter / Contador de caracteres
+<img alt="Repo Size" src="https://img.shields.io/github/repo-size/pauladanielafarias/charcount?style=flat&logo=github">  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pauladanielafarias/charcount">
+
+### Counts automatically the characters of an input text. / Cuenta automaticamente los caracteres del texto ingresado.
+
+<br>
+
+### :computer: Technologies / Tecnologías utilizadas: <img align="center" alt="CodeFactor Grade" src="https://img.shields.io/codefactor/grade/github/pauladanielafarias/charcount/master?&logo=codefactor&logoColor=green"> <img align="center" alt="GitHub language count" src="https://img.shields.io/github/languages/count/pauladanielafarias/charcount">  <img alt="GitHub top language" align="center" src="https://img.shields.io/github/languages/top/pauladanielafarias/charcount">
+
+- <img width="2%" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"> HTML5
+- <img width="2%" src="https://github.com/pauladanielafarias/pauladanielafarias/blob/master/images/css3-sm.png"> CSS3
+- <img width="2%" src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg"> Bootstrap
+- <img width="2%" src="https://www.vectorlogo.zone/logos/jquery/jquery-vertical.svg"> jQuery
+- <img width="2%" src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg"> JavaScript
+  
+ <br>
+
+
+#### :woman_technologist: **Developer:** [Paula Farias](https://linkedin.com/in/paulafarias)
+
+#### :busts_in_silhouette: Contributors: <img alt="Contributors" align="center" src="https://badges.pufler.dev/contributors/pauladanielafarias/charcount?size=50&padding=5&bots=true">
+
