@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CharCount</title>
+    <meta name="description" content="">
+    <meta name="author" content="Paula Farias">
+    <!--viewport // "user-scalable=no" prevents zooming-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--meta to make the status bar translucent in the phone / full-screen browsing-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ 
+    <!--Adds An iPhone And iPad Icon for Your Website-->
+    <link rel="apple-touch-icon" href="./style/img/logo.png" />
+    <!--Adds An Android Icon for Your Website-->
+    <link rel="apple-touch-icon-precomposed" href="./style/img/logo.png" />
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="CharCount">
+    <meta name="theme-color" content="#673ab7">
+    <link rel="icon" type="image/png" href="./style/img/logo.png" sizes="16x16 32x32" />
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-title" content="CharCount">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#673ab7">
+    
+    <!--Bootstrap v.5.0.1-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!--font awesome v5.8.1 (icons)-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!--my css- created in another file named main.css-->
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+
+   </head>
+<body>
+    <main>
+        <div class="container py-4">
+          <header class="pb-3 mb-4 border-bottom">
+            <a href="index.html" class="d-flex align-items-center text-dark text-decoration-none">
+                <img class="logo rounded img-fluid" src="./style/img/logo.png" alt="CharCount logo">
+                <span class="fs-4">CharCount</span>
+            </a>
+          </header>
+
+          <div class="pb-5 pt-3 px-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-3">
+                <h1 class="display-5 fw-bold">CharCount</h1>
+                <form id="charCount" action="#result">
+                    <label class="col-md-8 fs-4 form-label" for="textCharCount">Write your text here</label>
+                    <textarea class="mt-2 mb-3 fs-4 form-control" id="textCharCount" rows="3"></textarea>
+                    <button id="btn-count" class="float-end btn btn-primary btn-lg" type="submit">Count characters</button>
+                </form>
+            </div>
+           <!-- <h1 id="live_result"></h1>-->
+            <h1 id="result"></h1>
+
+          </div>
+      <!--
+          <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+              <div class="h-100 p-5 text-white bg-dark rounded-3">
+                <h2>Change the background</h2>
+                <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+                <button class="btn btn-outline-light" type="button">Example button</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="h-100 p-5 bg-light border rounded-3">
+                <h2>Add borders</h2>
+                <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+                <button class="btn btn-outline-secondary" type="button">Example button</button>
+              </div>
+            </div>
+          </div>
+          -->
+      
+          <footer class="pt-3 mt-4 text-muted border-top">
+            <a class="" href="linkedin.com/in/paulafarias" target="_blank"> Paula Farias</a> &copy; 2021
+          </footer>
+        </div>
+      </main>
+
+
+
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+    <!--jQuery v.3.6.0-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   
+    <!--main.js script-->
+    <script src="scripts/main.js"></script>
+ 
+
+</body>
+</html>
