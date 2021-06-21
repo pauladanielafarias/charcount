@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CharCount</title>
+    <title>Charcount</title>
     <meta name="description" content="">
     <meta name="author" content="Paula Farias">
     <!--viewport // "user-scalable=no" prevents zooming-->
@@ -14,18 +14,18 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
  
     <!--Adds An iPhone And iPad Icon for Your Website-->
-    <link rel="apple-touch-icon" href="./style/img/logo.png" />
+    <link rel="apple-touch-icon" href="./style/img/logo1.png" />
     <!--Adds An Android Icon for Your Website-->
-    <link rel="apple-touch-icon-precomposed" href="./style/img/logo.png" />
+    <link rel="apple-touch-icon-precomposed" href="./style/img/logo1.png" />
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="CharCount">
+    <meta name="application-name" content="Charcount">
     <meta name="theme-color" content="#673ab7">
-    <link rel="icon" type="image/png" href="./style/img/logo.png" sizes="16x16 32x32" />
+    <link rel="icon" type="image/png" href="./style/img/logo1.png" sizes="16x16 32x32" />
 
     <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-title" content="CharCount">
+    <meta name="apple-mobile-web-app-title" content="Charcount">
     <meta name="apple-mobile-web-app-status-bar-style" content="#673ab7">
     
     <!--Bootstrap v.5.0.1-->
@@ -44,22 +44,24 @@
         <div class="container py-4">
           <header class="pb-3 mb-4 border-bottom">
             <a href="index.html" class="d-flex align-items-center text-dark text-decoration-none">
-                <img class="logo rounded img-fluid" src="./style/img/logo.png" alt="CharCount logo">
-                <span class="fs-4">CharCount</span>
+                <img class="logo rounded img-fluid" src="./style/img/logo1.png" alt="Charcount logo">
+                <span class="fs-4"></span>
             </a>
           </header>
 
-          <div class="pb-5 pt-3 px-5 mb-4 bg-light rounded-3">
+          <div class="pb-4 pt-3 px-5 mb-4 bg-light rounded-3">
             <div class="container-fluid py-3">
-                <h1 class="display-5 fw-bold">CharCount</h1>
-                <form id="charCount" action="#result">
-                    <label class="col-md-8 fs-4 form-label" for="textCharCount">Write your text here</label>
-                    <textarea class="mt-2 mb-3 fs-4 form-control" id="textCharCount" rows="3"></textarea>
-                    <button id="btn-count" class="float-end btn btn-primary btn-lg" type="submit">Count characters</button>
+                <h1 class="display-5 fw-bold">Count the characters of your text</h1>
+                <form id="charcount" action="#result">
+                    <label class="col-md-8 fs-4 form-label" for="textCharcount">Write or paste your text here</label>
+                    <textarea class="mt-2 mb-3 fs-4 form-control" id="textCharcount" rows="3"></textarea>
+                    <h1 class="text-end" id="live_result">0</h1>
+                    <h1 id='blank_spaces'></h1>
+                   <!-- <button id="btn-count" class="float-end btn btn-primary btn-lg" type="submit">Count characters</button>-->
                 </form>
             </div>
-           <!-- <h1 id="live_result"></h1>-->
-            <h1 id="result"></h1>
+    
+            <!--<h1 id="result"></h1>-->
 
           </div>
       <!--
