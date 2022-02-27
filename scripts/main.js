@@ -3,12 +3,12 @@
         // on input
         $("#textCharcount").on('input',function(event) { 
             //toma el valor del input(target) 
-            var target = $(event.target);
-            var input_value = target.val();
+            let target = $(event.target);
+            let input_value = target.val();
 
             //toma el length del input
-            var live_characters = input_value.length;
-            var live_words = countWords(input_value);
+            let live_characters = input_value.length;
+            let live_words = countWords(input_value);
 
  
             //inserta en el html en #live_result
@@ -59,13 +59,17 @@
         });
         
         // function that counts the words of a given text
-        function countWords(text) {
-            var amount = 0;
-            if (text == "") {
+        const countWords = (text) =>{
+            let amount = 0;
+            if (text.trim() =="") {
                 amount = 0;
             } else if ((text.substring(text.length - 1, text.length) == "?") || (text.substring(text.length - 1, text.length) == "!") || (text.substring(text.length - 1, text.length) == " ") || (text.substring(text.length - 1, text.length) == ".")||(text.substring(text.length - 1, text.length) == /[\n\w]/g)) {
                 amount = text.replace(/(\.|!|\?| |\n\w)+|(\.|!|\?| |\n\w)+$|(\.|!|\?| |\n\w)+/g, "#").split("#").length - 1;
-            }else {
+            } 
+              else if(typeof text  == "number"){
+                amount = 0;
+            }
+            else {
                 amount = text.replace(/(\.|!|\?| |\n\w)+|(\.|!|\?| |\n\w)+$|(\.|!|\?| |\n\w)+/g, "#").split("#").length;
             }
             
@@ -74,8 +78,8 @@
         }
 
         //setup before functions
-        var typingTimer;                //timer identifier
-        var doneTypingInterval = 5000;  //time in ms, 5 seconds
+        let typingTimer;                //timer identifier
+        let doneTypingInterval = 5000;  //time in ms, 5 seconds
         
         //on keyup, start the countdown
         $('#textCharcount').on('keyup', function () {
@@ -91,14 +95,14 @@
         //user is "finished typing," do something
         function doneTyping () {
             //toma el valor del input 
-            var input_value = $('#textCharcount').val();
+            let input_value = $('#textCharcount').val();
             //toma el length del input
-            var live_characters = input_value.length;
+            let live_characters = input_value.length;
 
              //si el valor del input es distinto del valor del input con espacios en blanco (al final o al principio del texto)
             if(input_value != input_value.trim()){
                 //toma el valor de los espacios y lo inserta en el html en #blank_spaces
-                var blank_spaces = live_characters - input_value.trim().length
+                let blank_spaces = live_characters - input_value.trim().length
                 return $('#blank_spaces').html('<h4> You have '+ blank_spaces + ' blank space/s at the end or begining of your text. </h4>');
         
             }else{
@@ -108,8 +112,8 @@
 
         /* 
         $("#textCharcount").on('keydown',function(event) { 
-            var keyCode = event.which;
-            var shift = event.shiftKey;
+            let keyCode = event.which;
+            let shift = event.shiftKey;
 
             // 13 es el código de tecla del enter
             if (keyCode == 13){
@@ -120,13 +124,13 @@
         }); 
 
         $("#charcount").on('submit',function(){
-            var total_characters = $("#textCharcount").val().length;
-            var no_blank_spaces = $("#textCharcount").val().trim().length;
+            let total_characters = $("#textCharcount").val().length;
+            let no_blank_spaces = $("#textCharcount").val().trim().length;
 
             if(total_characters == no_blank_spaces){
                 $('#result').html('<h1 class="mt-5">'+total_characters + '</h1>');
             }else{
-                var blank_spaces = total_characters-no_blank_spaces;
+                let blank_spaces = total_characters-no_blank_spaces;
                 $('#result').html('<h1 class="mt-5">'+no_blank_spaces + '</h1> <h6> You also have '+ blank_spaces + ' blank space/s at the end or begining of your text.</h6>');
             }
 
