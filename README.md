@@ -26,7 +26,7 @@
 <br>
 
 <!--Create Badge on https://shields.io/category/monitoring--> 
-#### :link: Deployed on GitHub: [<img align="center" alt="Website" src="https://img.shields.io/website?down_message=offline&label=%20&logo=google-chrome&logoColor=white&up_color=blue&up_message=online&url=https://pauladanielafarias.github.io/charcount/">]( https://pauladanielafarias.github.io/charcount/)  [CharCount]( https://pauladanielafarias.github.io/charcount/) 
+#### :link: Deployed on GitHub: [<img align="center" alt="Website" src="https://img.shields.io/website?down_message=offline&down_color=red&label=%20&logo=google-chrome&logoColor=white&up_color=green&up_message=online&url=https://pauladanielafarias.github.io/charcount/">]( https://pauladanielafarias.github.io/charcount/)  [CharCount]( https://pauladanielafarias.github.io/charcount/) 
 <!--
 <a href=" https://pauladanielafarias.github.io/charcount/"> <img align="center" alt="Website" src="https://img.shields.io/website?down_message=offline&label=%20&logo=google-chrome&logoColor=white&up_color=blue&up_message=online&url=https://pauladanielafarias.github.io/charcount/"> </a>
 --> 
