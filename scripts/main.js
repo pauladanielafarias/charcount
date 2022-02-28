@@ -87,9 +87,9 @@ $(document).ready(function () {
             num_amount = 0;
         }
         //if input_value is a number
-        else if (!isNaN(parseInt(input_value))) {
-            let regex_arr = input_value.match(num_regex);
-            num_amount = regex_arr.length;
+        else if (input_value.match(num_regex) != null) {
+            let num_regex_arr = input_value.match(num_regex);
+            num_amount = num_regex_arr.length;
         }
         
         return num_amount;
