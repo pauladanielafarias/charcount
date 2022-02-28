@@ -1,7 +1,7 @@
 <!--Create Badges on https://pufler.dev/git-badges/ and https://shields.io/category/social-->
 
-<a src="https://github.com/pauladanielafarias/?tab=follow"><img alt="GitHub Follow" align="right" src="https://img.shields.io/github/followers/pauladanielafarias?label=Follow&style=social"></a> 
-<img alt="Repository visits" align="right" src="https://badges.pufler.dev/visits/pauladanielafarias/charcount?style=social&color=purple&logo=github"> 
+<a src="https://github.com/pauladanielafarias/?tab=follow"><img alt="GitHub Follow" align="left" src="https://img.shields.io/github/followers/pauladanielafarias?label=Follow&style=social"></a> 
+<img alt="Repository visits" align="left" src="https://badges.pufler.dev/visits/pauladanielafarias/charcount?style=social&color=purple&logo=github"> 
 <br>
 
 <img alt="Repository created date" align="right" src="https://badges.pufler.dev/created/pauladanielafarias/charcount?style=social&color=black&logo=github"> 
