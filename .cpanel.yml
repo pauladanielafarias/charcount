@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export $(grep -v '^#' .env | xargs) #Set environment variables
+    - export DEPLOY_PATH=/home2/charcount/public_html/ #Set DEPLOY_PATH
     - /bin/cp -R scripts $DEPLOY_PATH #Deploy scripts directory
     - /bin/cp -R style $DEPLOY_PATH #Deploy style directory
     - /bin/cp index.html $DEPLOY_PATH #Deploy index.html file
