@@ -21,12 +21,13 @@
 - <img width="2%" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"> HTML5
 - <img width="2%" src="https://github.com/pauladanielafarias/pauladanielafarias/blob/master/images/css3-sm.png"> CSS3
 - <img width="2%" src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg"> Bootstrap
+- <img width="2%" src="https://github.com/pauladanielafarias/pauladanielafarias/blob/master/images/js.svg"> JavaScript
 - <img width="2%" src="https://www.vectorlogo.zone/logos/jquery/jquery-vertical.svg"> jQuery
-- <img width="2%" src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg"> JavaScript
+- <img width="2%" src="https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg"> Vue.js
 <br>
 
 <!--Create Badge on https://shields.io/category/monitoring--> 
-#### :link: Deployed on GitHub: [<img align="center" alt="Website" src="https://img.shields.io/website?down_message=offline&down_color=red&label=%20&logo=google-chrome&logoColor=white&up_color=green&up_message=online&url=https://pauladanielafarias.github.io/charcount/">]( https://pauladanielafarias.github.io/charcount/)  [CharCount]( https://pauladanielafarias.github.io/charcount/) 
+#### :link: Deployed on GitHub: [<img align="center" alt="Website" src="https://img.shields.io/website?down_message=offline&down_color=red&label=%20&logo=google-chrome&logoColor=white&up_color=green&up_message=online&url=https://pauladanielafarias.github.io/charcount/">]( https://pauladanielafarias.github.io/charcount/)  [CharCount]( https://charcount.com.ar) 
 <!--
 <a href=" https://pauladanielafarias.github.io/charcount/"> <img align="center" alt="Website" src="https://img.shields.io/website?down_message=offline&label=%20&logo=google-chrome&logoColor=white&up_color=blue&up_message=online&url=https://pauladanielafarias.github.io/charcount/"> </a>
 --> 
