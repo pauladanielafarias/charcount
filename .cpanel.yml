@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export ../config/.env #Set environment variables
+    - export ./config/.env #Set environment variables
     - /bin/cp -R scripts $DEPLOY_PATH #Deploy scripts directory
     - /bin/cp -R style $DEPLOY_PATH #Deploy style directory
     - /bin/cp index.html $DEPLOY_PATH #Deploy index.html file
