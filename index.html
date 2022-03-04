@@ -32,7 +32,7 @@
   <!-- ----- HTTP EQUIVALENTS META TAGS ----- -->
   <!-- This information is read as a substitute if the web server is not correctly configured.-->
 
-  <!--cache-control --> 
+  <!--cache-control -->
   <!-- 
       Website reloded from the web server with every page view.
       This leads to longer loading times, but on the other hand, it can be very useful, for example, if a web page’s content is constantly being updated.
@@ -69,17 +69,22 @@
   <meta property="og:url" content="https://pauladanielafarias.github.io/charcount/" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="es_ES" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/pauladanielafarias/charcount/master/style/img/logo1.png"> <!--must be an URL-->
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/pauladanielafarias/charcount/master/style/img/logo1.png">
+  <!--must be an URL-->
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="256" />
   <meta property="og:image:height" content="256" />
   <!--<meta property="og:updated_time" content="1440432930" />-->
 
 
-<!-- ----- STYLESHEETS ----- -->
-  <!--Bootstrap v.5.0.1-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- ----- STYLESHEETS ----- -->
+  <!--Bootstrap v.5.1.3-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!--Bootstrap Icons v.1.8.1-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
   <!--font awesome v5.8.1 (icons)-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -91,51 +96,163 @@
 </head>
 
 <body>
-  <main>
-    <div class="container py-4">
-      <header class="pb-3 mb-4 border-bottom">
-        <a href="index.html" class="d-flex align-items-center text-dark text-decoration-none">
-          <img class="logo rounded img-fluid" src="./style/img/logo1.png" alt="Charcount logo">
-          <span class="fs-4"></span>
-        </a>
-      </header>
+  <main id="app">
+    <div class="container">
 
-      <div class="pb-4 pt-3 px-5 mb-4 bg-light rounded-3">
-        <div class="container-fluid py-3">
-          <h1 class="display-5 fw-bold">Count the characters of your text</h1>
-          <form id="charcount" action="#result">
-            <label class="col-md-8 fs-4 form-label" for="textCharcount">Write or paste your text here:</label>
-            <textarea class="mt-2 mb-3 fs-4 form-control" id="textCharcount" rows="5"></textarea>
-            <div class="d-flex justify-content-center" id="live_result">
-              <h1 class="mx-4">Characters: 0</h1>
-              <h1 class="mx-4">Words: 0</h1>
-              <h1 class="mx-4">Numbers: 0</h1>
-              <h1></h1>
+      <!-- ------- HEADER ------- -->
+      <header class="py-3 mb-4 border-bottom">
+        <div class="row">
+          <div class="col">
+            <a href="" class="d-flex align-items-center text-dark text-decoration-none">
+              <img class="logo rounded img-fluid" src="./style/img/logo1.png" alt="Charcount logo">
+            </a>
+          </div>
+          <div class="col d-flex justify-content-end align-items-center">
+            <!-- LANGUAGE: ENGLISH-->
+            <div v-if="language=='english'">
+              <div class="btn-group" role="group" aria-label="Toggle button group">
+                <input v-on:click="language='english'" type="radio" class="btn-check" name="language" id="btn_english"
+                  autocomplete="off" checked>
+                <label class="btn btn-sm btn-outline-secondary" for="btn_english">English</label>
+
+                <input v-on:click="language='spanish'" type="radio" class="btn-check" name="language" id="btn_spanish"
+                  autocomplete="off">
+                <label class="btn btn-sm btn-outline-secondary" for="btn_spanish">Spanish</label>
+
+              </div>
+
             </div>
-            <h1 id='blank_spaces'></h1>
-            <!-- <button id="btn-count" class="float-end btn btn-primary btn-lg" type="submit">Count characters</button>-->
-          </form>
+            <!-- LANGUAGE: SPANISH-->
+            <div v-if="language=='spanish'">
+              <div class="btn-group" role="group" aria-label="Toggle button group">
+                <input v-on:click="language='english'" type="radio" class="btn-check" name="language" id="btn_english"
+                  autocomplete="off" checked>
+                <label class="btn btn-sm btn-outline-secondary" for="btn_english">Inglés</label>
+
+                <input v-on:click="language='spanish'" type="radio" class="btn-check" name="language" id="btn_spanish"
+                  autocomplete="off">
+                <label class="btn btn-sm btn-outline-secondary" for="btn_spanish">Español</label>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ------- CONTENT ------- -->
+      <div class="container bg-light" id="content">
+        <!-- ----- CONTENT IN ENGLISH --- -->
+        <div v-if="language == 'english'" class="pb-4 pt-3 px-3 rounded-3">
+          <div class="container-fluid py-3">
+            <!-- --- TITLE --- -->
+            <h1 class="display-5 fw-bold">Count the characters of your text</h1>
+
+            <!-- --- FORM: INPUT TEXT --- -->
+            <form id="charcount" action="#result">
+              <label class="col-md-8 fs-4 form-label" for="textCharcount">Write or paste your text here:</label>
+              <textarea v-model="input_text" class="mt-2 mb-3 fs-4 form-control" id="textCharcount" rows="5"></textarea>
+            </form>
+
+            <!-- --- LIVE RESULT --- -->
+            <div id="live_result">
+              <div class="row">
+                <!-- CHARACTERS -->
+                <div class="col text-center">
+                  <h1 class="mx-3">Characters: <br> {{live_characters(input_text)}}</h1>
+                </div>
+                <!-- WORDS -->
+                <div class="col text-center">
+                  <h1 class="mx-3">Words: <br> {{live_words(input_text)}}</h1>
+                </div>
+                <!-- NUMBERS -->
+                <div class="col text-center">
+                  <h1 class="mx-3">Numbers: <br> {{live_numbers(input_text)}}</h1>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- BLANK SPACES -->
+                <p id='blank_spaces' class="h5 pt-4 text-center">
+                  You have {{live_blank_spaces(input_text)}} blank space/s at the end or begining of your text.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
         </div>
 
-        <!--<h1 id="result"></h1>-->
+        <!-- ----- CONTENT IN SPANISH ----- -->
+        <div v-if="language == 'spanish'" class="pb-4 pt-3 px-3 rounded-3">
+          <div class="container-fluid py-3">
+            <!-- --- TITLE --- -->
+            <h1 class="display-5 fw-bold">Cuenta los caracteres de tu texto</h1>
 
-        <footer class="pt-3 mt-4 text-muted border-top">
-          <a class="" href="https://linkedin.com/in/paulafarias" target="_blank"> Paula Farias</a> &copy; 2022
-        </footer>
+            <!-- --- FORM: INPUT TEXT --- -->
+            <form id="charcount" action="#result">
+              <label class="col-md-8 fs-4 form-label" for="textCharcount">Escribe o pega tu texto aquí:</label>
+              <textarea v-model="input_text" class="mt-2 mb-3 fs-4 form-control" id="textCharcount" rows="5"></textarea>
+            </form>
+
+            <!-- --- LIVE RESULT --- -->
+            <div id="live_result">
+              <div class="row">
+                <!-- CHARACTERS -->
+                <div class="col text-center">
+                  <h1 class="mx-3">Caracteres: <br> {{live_characters(input_text)}}</h1>
+                </div>
+                <!-- WORDS -->
+                <div class="col text-center">
+                  <h1 class="mx-3">Palabras: <br> {{live_words(input_text)}}</h1>
+                </div>
+                <!-- NUMBERS -->
+                <div class="col text-center">
+                  <h1 class="mx-3">Números: <br> {{live_numbers(input_text)}}</h1>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- BLANK SPACES -->
+                <p id='blank_spaces' class="h5 pt-4 text-center">
+                  Tienes {{live_blank_spaces(input_text)}} espacio/s en blanco al final o al principio de tu texto.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
       </div>
+
+      <!-- ------- FOOTER ------- -->
+      <footer class="pb-4 pt-3 px-3 bg-light text-muted border-top d-flex justify-content-center">
+        <p class="pt-2">
+          <i class="bi bi-laptop"></i>
+          Developed by
+          <a class="" href="https://linkedin.com/in/paulafarias" target="_blank">Paula Farias</a>
+          2022&copy;
+        </p>
+      </footer>
+
+    </div>
   </main>
 
   <!-- Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
   <!--jQuery v.3.6.0-->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
 
+  <!--Vue.js v2.6.14-->
+  <script src="scripts/vue.js"></script>
+
   <!--main.js script-->
   <script src="scripts/main.js"></script>
+
+  <!--style.js script-->
+  <script src="scripts/style.js"></script>
 
 
 </body>
