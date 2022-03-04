@@ -1,4 +1,24 @@
+body{
+    background-color:#f7f8f9;
+}
+
+/*----- HEADER LOGO -----*/
 .logo{
     max-width: 80px;
     max-height: 80px;
+}
+
+/*----- HEADER BUTTONS -----*/
+
+/*-- LANGUAGE BUTTONS --*/
+
+/* BOX SHADOW AND OUTLINE WIDTH IN FOCUS */
+.btn-check:focus+label{
+    box-shadow: none !important;
+    outline-width: 0px!important;
+}
+/* BOX SHADOW AND OUTLINE WIDTH IN FOCUS */
+.btn-check:checked+label:focus{
+    box-shadow: none !important;
+    outline-width: 0px!important;
 }
