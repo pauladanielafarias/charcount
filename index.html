@@ -156,9 +156,9 @@
         </div>
       </header>
       <!-- ------- CONTENT ------- -->
-      <div class="container bg-light" id="content">
+      <div  id="content" class="container bg-light">
         <!-- ----- CONTENT IN ENGLISH --- -->
-        <div v-if="language == 'english'" class="pb-4 pt-3 px-3 rounded-3">
+        <div id="english" v-if="language == 'english'" class="pb-4 pt-3 px-3 rounded-3">
           <div class="container-fluid py-3">
             <!-- --- TITLE --- -->
             <h1 class="display-5 fw-bold">Count the characters of your text</h1>
@@ -199,7 +199,7 @@
         </div>
 
         <!-- ----- CONTENT IN SPANISH ----- -->
-        <div v-if="language == 'spanish'" class="pb-4 pt-3 px-3 rounded-3">
+        <div id="spanish" v-if="language == 'spanish'" class="pb-4 pt-3 px-3 rounded-3">
           <div class="container-fluid py-3">
             <!-- --- TITLE --- -->
             <h1 class="display-5 fw-bold">Cuenta los caracteres de tu texto</h1>
