@@ -27,7 +27,7 @@ const app = new Vue({
         input_text: this.input_text || "", //comes from v-model
         language: "english", //changes language
         social_media_share:{
-            facebook_share: `https://www.facebook.com/sharer/sharer.php?u="${url}`,
+            facebook_share: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
             twitter_share: `https://twitter.com/intent/tweet?url=${url}&text=Hello world! Try Charcount to count the characters, words and numbers of a text.`,
             linkedin_share: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
             whatsapp_share: `https://wa.me/?text= Hey! Try Charcount to count the characters, words and numbers of a text. https://charcount.com.ar`,
