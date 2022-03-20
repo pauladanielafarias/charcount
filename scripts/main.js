@@ -8,6 +8,7 @@ let num_amount = 0;
 const num_regex = /(\d)/g;
 
 let blank_spaces =0;
+const url = "https://charcount.com.ar";
 
 //----- APP (VUE v2.6.14) -----
 const app = new Vue({
@@ -15,6 +16,15 @@ const app = new Vue({
     data: {
         input_text: this.input_text || "", //comes from v-model
         language: "english", //changes language
+        social_media_share:{
+            facebook_share: `https://www.facebook.com/sharer/sharer.php?u="${url}`,
+            twitter_share: `https://twitter.com/intent/tweet?url=${url}&text=Hello world! Try Charcount to count the characters, words and numbers of a text.`,
+            linkedin_share: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+            whatsapp_share: `https://wa.me/?text= Hey! Try Charcount to count the characters, words and numbers of a text. https://charcount.com.ar`,
+            telegram_share: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent("Hey! Try Charcount to count the characters, words and numbers of a text.")}`
+
+        }
+
     },
     methods: {
         //----- LIVE RESULTS METHODS -----
@@ -63,8 +73,6 @@ const app = new Vue({
     }
 
 })
-
-
 
 /*
 $(document).ready(function () {
