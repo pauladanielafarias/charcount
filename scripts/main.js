@@ -1,3 +1,13 @@
+//----- LOADER -----
+const showPage = ()=>{
+    $("#loader").hide();
+    $("#app").show();
+}
+const loading = ()=> {
+    setTimeout(showPage, 500);
+}
+loading()
+
 //----- VARs AND CONSTs -----
 let word_amount = 0;
 //regex matches: char. or char! or char? or char, or char  or char \n or char
@@ -7,7 +17,7 @@ let num_amount = 0;
 //regex matches: any num
 const num_regex = /(\d)/g;
 
-let blank_spaces =0;
+let blank_spaces = 0;
 const url = "https://charcount.com.ar";
 
 //----- APP (VUE v2.6.14) -----
@@ -72,6 +82,7 @@ const app = new Vue({
     }
 
 })
+
 
 /*
 $(document).ready(function () {

@@ -2,6 +2,11 @@ body{
     background-color:#f7f8f9;
 }
 
+/*----- LOADER -----*/
+#loader{
+    
+}
+
 /*----- HEADER LOGO -----*/
 .logo{
     max-width: 80px;
