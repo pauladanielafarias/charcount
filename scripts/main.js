@@ -22,7 +22,6 @@ const app = new Vue({
             linkedin_share: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
             whatsapp_share: `https://wa.me/?text= Hey! Try Charcount to count the characters, words and numbers of a text. https://charcount.com.ar`,
             telegram_share: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent("Hey! Try Charcount to count the characters, words and numbers of a text.")}`
-
         }
 
     },
