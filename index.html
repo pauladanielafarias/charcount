@@ -25,8 +25,8 @@
   <!-- End Google Tag Manager -->
 
   <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1460579928284225"
-    crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9393202413374023"
+  crossorigin="anonymous"></script>
 
   <!-- meta tags docs
     - https://www.ionos.com/digitalguide/websites/web-development/the-most-important-meta-tags-and-their-functions/
@@ -80,19 +80,19 @@
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#673ab7">
+  <meta name="theme-color" content="#F7F8F9">
   <link rel="icon" type="image/png" href="./style/img/logo1.png" sizes="16x16 32x32" />
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-title" content="Charcount">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#673ab7">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#F7F8F9">
 
   <!-- ----- OPEN GRAPH META TAGS (WhatsApp, Facebook) https://ogp.me/ ----- -->
   <meta property="og:site_name" content="Charcount">
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Charcount" />
   <meta property="og:description" content="Count the characters, words and numbers of your text." />
-  <meta property="og:url" content="https://pauladanielafarias.github.io/charcount/" />
+  <meta property="og:url" content="https://charcount.com.ar" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="es_ES" />
   <meta property="og:image"
@@ -112,12 +112,14 @@
   <!--Bootstrap Icons v.1.8.1-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-  <!--font awesome v5.8.1 (icons)-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!--font awesome v6.0.0 (icons)-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" crossorigin="anonymous">
 
   <!--my css- created in another file named main.css-->
   <link href="style/main.css" rel="stylesheet" type="text/css" />
+
+  <!--my css- created in another file named font_awesome_style.css-->
+  <link href="style/font_awesome_style.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -133,11 +135,13 @@
       <!-- ------- HEADER ------- -->
       <header class="py-3 mb-4 border-bottom">
         <div class="row">
+          <!-- --- LOGO --- -->
           <div class="col">
             <a href="" class="d-flex align-items-center text-dark text-decoration-none">
               <img class="logo rounded img-fluid" src="./style/img/logo1.png" alt="Charcount logo">
             </a>
           </div>
+          <!-- --- CHANGE LANG --- -->
           <div class="col d-flex justify-content-end align-items-center">
             <!-- LANGUAGE: ENGLISH-->
             <div v-if="language=='english'">
@@ -166,6 +170,34 @@
 
               </div>
             </div>
+          </div>
+        </div>
+        <div class="row" id="social_media_share">
+          <!-- --- SHARE IN SOCIAL MEDIA --- -->
+          <div class="col">
+            <div class="text-right">
+
+              <p v-if="language=='english'" class="m-1">If you like Charcount, you can share it with your friends.</p>
+              <p v-if="language=='english'" class="m-1">Si te gusta Charcount, puedes compartirlo con tus amigos.</p>
+              <a class="m-1" v-bind:href="social_media_share.whatsapp_share" target="_blank"> 
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a class="m-1" v-bind:href="social_media_share.telegram_share" target="_blank">
+                <i class="fa-brands fa-telegram"></i>
+              </a>
+              <a class="m-1" v-bind:href="social_media_share.facebook_share" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a class="m-1" v-bind:href="social_media_share.twitter_share" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a class="m-1" v-bind:href="social_media_share.linkedin_share" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+
+
+            </div>
+
           </div>
         </div>
       </header>
@@ -256,12 +288,22 @@
 
       <!-- ------- FOOTER ------- -->
       <footer class="pb-4 pt-3 px-3 bg-light text-muted border-top d-flex justify-content-center">
-        <p class="pt-2">
-          <i class="bi bi-laptop"></i>
-          Developed by
-          <a class="" href="https://linkedin.com/in/paulafarias" target="_blank">Paula Farias</a>
-          2022&copy;
-        </p>
+        <div class="container">
+          <div class="row text-center">
+            <p class="pt-2">
+              <i class="bi bi-laptop"></i>
+              Developed by
+              <a class="" href="https://linkedin.com/in/paulafarias" target="_blank">Paula Farias</a>
+              2022&copy;
+            </p>
+          </div>
+          <div class="d-flex flex-row justify-content-center">
+            <a class="m-1" href="https://linkedin.com/in/paulafarias" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a class="m-1" href="https://github.com/pauladanielafarias" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+
       </footer>
 
     </div>
